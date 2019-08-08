@@ -1,5 +1,6 @@
 import sys
 import re
+import subprocess
 
 print("Convert to MOV by Kemote")
 
@@ -19,4 +20,4 @@ print(format)
 print(file)
 print(path)
 
-input('preess jakis przycisk')
+subprocess.call(['ffmpeg', '-i', file + index +  "." + format, 'output.mov'])
